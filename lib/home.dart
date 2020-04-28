@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:mehdevclub/events.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-//        backgroundColor: Colors.white,
-        title: Text('Events'),
+        title: Text('Events', style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 25,))),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.refresh),
           onPressed: (){},
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-//          padding: const EdgeInsets.all(10.0),
+        //  padding: const EdgeInsets.all(10.0),
           child: StreamBuilder<QuerySnapshot>(
             stream: Firestore.instance
                 .collection('Events')
@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
                 (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
               if (snapshot.hasError)
                 return Text('Error: ${snapshot.error}');
-              if (!snapshot.hasData && snapshot.data.documents == null)
+              if (snapshot.hasData && snapshot.data.documents == null)
                 return Text(
                     'No events are available now!!!\n\nPlease try again later.',
                     style: TextStyle(fontSize: 15));

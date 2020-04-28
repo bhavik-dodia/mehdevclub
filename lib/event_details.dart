@@ -1,8 +1,8 @@
-import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class EventDetails extends StatelessWidget {
   EventDetails(
@@ -24,7 +24,7 @@ class EventDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Home', style:GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 25,))),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.refresh),
@@ -42,26 +42,23 @@ class EventDetails extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(8),
+          padding: EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              // Image(
-              //   image: AssetImage('assets/Mehsana-Developers-Club-4.png'),
-              //   color: Colors.black87,
-              //   fit: BoxFit.cover,
-              //   colorBlendMode: BlendMode.darken,
-              // ),
+              Image(
+                image: AssetImage('assets/Mehsana-Developers-Club-4.png'),
+              ),
               SizedBox(height: 15),
               Text(
                 'Welcome to $eventName',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
               ),
               SizedBox(height: 15),
               Text(
                 eventDescription,
                 softWrap: true,
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 13),
+                textAlign: TextAlign.justify,
+                style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 20,)),
               ),
               SizedBox(height: 20),
               Container(
@@ -129,7 +126,7 @@ class EventDetails extends StatelessWidget {
               SizedBox(height: 15),
               Text(
                 '#MehDevClub',
-                style: TextStyle(color: Colors.blueAccent),
+                style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 18, color: Colors.blueAccent)),
               )
             ],
           ),
@@ -150,7 +147,7 @@ class EventDetails extends StatelessWidget {
           children: <Widget>[
             icon,
             SizedBox(height: 10),
-            Text(title),
+            Text(title, style:GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 18,)),),
           ],
         ),
       ),
