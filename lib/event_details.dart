@@ -24,12 +24,12 @@ class EventDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home', style:GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 25,))),
+        elevation: 8,
+        title: Text('Home',
+            style: GoogleFonts.alegreya(
+              fontSize: 25,
+            )),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.refresh),
-            onPressed: () {},
-          ),
           IconButton(
             icon: Icon(Icons.lightbulb_outline),
             onPressed: () {},
@@ -51,14 +51,17 @@ class EventDetails extends StatelessWidget {
               SizedBox(height: 15),
               Text(
                 'Welcome to $eventName',
-                style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                style: GoogleFonts.alegreya(
+                    fontSize: 25, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 15),
               Text(
                 eventDescription,
                 softWrap: true,
                 textAlign: TextAlign.justify,
-                style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 20,)),
+                style: GoogleFonts.alegreya(
+                  fontSize: 20,
+                ),
               ),
               SizedBox(height: 20),
               Container(
@@ -126,7 +129,8 @@ class EventDetails extends StatelessWidget {
               SizedBox(height: 15),
               Text(
                 '#MehDevClub',
-                style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 18, color: Colors.blueAccent)),
+                style: GoogleFonts.alegreya(
+                    fontSize: 18, color: Colors.blueAccent),
               )
             ],
           ),
@@ -147,7 +151,7 @@ class EventDetails extends StatelessWidget {
           children: <Widget>[
             icon,
             SizedBox(height: 10),
-            Text(title, style:GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 18,)),),
+            Text(title, style: GoogleFonts.alegreya(fontSize: 18)),
           ],
         ),
       ),

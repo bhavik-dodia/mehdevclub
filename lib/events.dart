@@ -27,11 +27,11 @@ class Events extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Text(eventStatus,
-              style: GoogleFonts.alegreya(textStyle: TextStyle(
+              style: GoogleFonts.alegreya(
                   color:
                       eventStatus == 'Active' ? Colors.green : Colors.redAccent,
                   fontSize: 18,
-                  fontWeight: FontWeight.bold))),
+                  fontWeight: FontWeight.bold)),
           InkWell(
             onTap: () {
               Navigator.push(
@@ -55,7 +55,6 @@ class Events extends StatelessWidget {
               child: Container(
                 height: 100,
                 width: 249,
-                // padding: EdgeInsets.all(8),
                 child: Stack(
                   overflow: Overflow.clip,
                   children: <Widget>[
@@ -73,13 +72,13 @@ class Events extends StatelessWidget {
                         children: <Widget>[
                           Align(
                             alignment: Alignment.topLeft,
-                            child: Text(eventName,
-                                style: GoogleFonts.alegreya(
-                                  textStyle: TextStyle(
-                                    color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                )),
+                            child: Text(
+                              eventName,
+                              style: GoogleFonts.alegreya(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                           Align(
                             alignment: Alignment.bottomRight,
@@ -87,25 +86,31 @@ class Events extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: <Widget>[
-                                Text(
-                                  eventOrganizer,
-                                  textAlign: TextAlign.right,
-                                  style: GoogleFonts.alegreya(textStyle: TextStyle(
+                                Text(eventOrganizer,
+                                    textAlign: TextAlign.right,
+                                    style: GoogleFonts.alegreya(
                                       fontSize: 18,
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold),)
-                                ),
-                                Text(
-                                  eventVenue,
-                                  textAlign: TextAlign.right,
-                                  style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 15, color: Colors.white,),)
-                                ),
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                                Text(eventVenue,
+                                    textAlign: TextAlign.right,
+                                    style: GoogleFonts.alegreya(
+                                      fontSize: 15,
+                                      color: Colors.white,
+                                    )),
                               ],
                             ),
                           ),
                           Align(
                             alignment: Alignment.bottomLeft,
-                            child: Text(eventDate, style: GoogleFonts.alegreya(textStyle: TextStyle(fontSize: 18, color: Colors.white,),),),
+                            child: Text(
+                              eventDate,
+                              style: GoogleFonts.alegreya(
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ],
                       ),
